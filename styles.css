@@ -9,4 +9,197 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid: max-content 1fr max-content/ 1fr;
+    height: 100%;
+}
+
+.header,
+.main,
+.footer {
+    padding: 0 2rem;
+}
+
+img {
+    height: 23.8rem;
+    width: 28.6rem;
+}
+
+.container {
+    max-width: 114rem;
+}
+
+header.header,
+main.main {
+    display: grid;
+    justify-items: center;
+}
+
+header.header>.container {
+    max-width: 114rem;
+    width: 100%;
+    /* background: chartreuse; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2.4rem;
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: -.08rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+main.main>.container {
+    max-width: 114rem;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    height: 100%;
+    display: grid;
+    row-gap: 1.5rem;
+    grid-template-rows: max-content 1fr;
+    justify-items: center;
+}
+
+main.main .container {
+    width: 100%;
+}
+
+.main .text-content {
+    font-family: Space Mono;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 4rem;
+}
+
+.main .text-content>h1 {
+    font-family: Space Mono;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7.1rem;
+    letter-spacing: -0.035em;
+    text-align: left;
+}
+
+.main .text-content>p {
+    font-family: Space Mono;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.7rem;
+    letter-spacing: -0.035em;
+    text-align: left;
+}
+
+.main .text-content>button {
+    justify-self: start;
+    padding: 2.4rem 4.3rem;
+    background: #333333;
+    font-family: Space Mono;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.1rem;
+    letter-spacing: -0.035em;
+    text-align: left;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+footer.footer {
+    display: grid;
+    justify-items: center;
+}
+
+footer.footer>.container {
+    color: #BDBDBD;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 114rem;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+@media (min-width: 947px) {
+    header.header,
+    main.main,
+    footer.footer {
+        padding: 0 3.2rem;
+    }
+    img {
+        height: 41.4rem;
+        width: 53rem;
+    }
+    main.main>.container {
+        grid: 1fr / 1fr 1fr;
+        column-gap: 2rem;
+        align-items: center;
+    }
+}
+
+@media (min-width: 753px) {
+    header.header,
+    main.main,
+    footer.footer {
+        padding: 0 3.2rem;
+    }
+    main.main>.container {
+        grid: 1fr / 1fr 1fr;
+        column-gap: 1rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 417px) {
+    html {
+        font-size: 49%;
+    }
+    img {
+        height: 100%;
+        width: 33rem;
+    }
+    main.main>.container {
+        grid-template-rows: 1fr 1.5fr;
+    }
+    .main .text-content {
+        row-gap: 2rem;
+    }
+    footer.footer>.container {
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 45%;
+    }
+    img {
+        height: 100%;
+        width: 30rem;
+    }
+    .main .text-content {
+        row-gap: 2rem;
+    }
+    footer.footer>.container {
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.4rem;
+    }
 }
